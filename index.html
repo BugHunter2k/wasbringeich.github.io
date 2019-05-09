@@ -41,6 +41,8 @@
           test = $('<template></template>').append($.parseHTML(result));
           rows = test.find('#itemList .row');
           items = []
+          // Clear list before adding new Items
+          $('#list').find('li').remove();
           rows.each( function(i, el) {
             item = $(this).find('.item div').text();
             bringer = $(this).find('.bringer ul li');
